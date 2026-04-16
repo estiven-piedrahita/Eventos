@@ -1,0 +1,79 @@
+﻿body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgba(155, 155, 155, 0.24);
+    
+}
+
+
+.form-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 60%;
+    margin-left: 250px;
+    margin-top: 40px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    
+}
+.title{
+    
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+}
+label{
+    font-size: 23px;
+    padding-bottom: 6px;
+    
+}
+
+.btn {
+    padding: 6px 10px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+.btn-warning {
+    background: #ffc107;
+    color: black;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
