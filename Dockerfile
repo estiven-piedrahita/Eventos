@@ -8,7 +8,7 @@ WORKDIR /app
 COPY *.csproj ./
 RUN dotnet restore
 
-# Copiar todo el código
+# Copiar todo el código 
 COPY . ./
 
 # Publicar la aplicación

@@ -2,10 +2,10 @@
 
 public class Evento
 {
-    int Id { get; set; }
-    string Nombre { get; set; }
-    DateTime Fecha  { get; set; } =  DateTime.Now;
-    string Descripcion { get; set; }
-    string Ubicacion { get; set; }
-    string Imagen { get; set; }
+   public  int Id { get; set; }
+    public string? Nombre { get; set; }
+    public DateTime Fecha  { get; set; } =  DateTime.Now;
+    public string? Descripcion { get; set; }
+    public string? Ubicacion { get; set; }
+    public string? Imagen { get; set; }
 }

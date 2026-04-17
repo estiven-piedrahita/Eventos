@@ -1,35 +1,67 @@
-﻿
+﻿<form action="">
+    <div class="container mt-5">
+        <div class="card shadow-4 rounded-4 overflow-hidden">
+            
+            <div class="bg-image">
+                <img src="https://via.placeholder.com/900x300" class="img-fluid w-100" />
+            </div>
 
-<html>
-<head>
-    <title>title</title>
+            <div class="card-body"> 
+                
+                <h2 class="fw-bold"></h2>
+                
+                <div class="d-flex gap-4 text-muted mb-3">
+                    <span>📅</span>
+                    <span>📍</span>
+                </div>
     
-</head>
-<body>
-<div>
-    <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-4">
-
-            <div class="bg-image hover-overlay ripple">
-                <img src="https://via.placeholder.com/400x200" class="img-fluid" />
-            </div>
-
-            <div class="card-body">
-                <h5 class="card-title">Nombre del Evento</h5>
-
-                <p class="card-text">
-                    Aquí va una descripción corta del evento para mostrar información básica.
+                <hr />
+                
+                <h5>Descripción</h5>
+                <p class="text-muted">
+                    
                 </p>
+                
+                <div class="row text-center mt-4">
 
-                <p><strong>📅</strong> 10/05/2026</p>
-                <p><strong>📍</strong> Medellín</p>
+                    <div class="col-md-4">
+                        <div class="p-3 border rounded-3">
+                            <h6 class="text-muted">Capacidad</h6>
+                            <h4></h4>
+                        </div>
+                    </div>
 
-                <a href="#" class="btn btn-warning btn-sm">Editar</a>
-                <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                    <div class="col-md-4">
+                        <div class="p-3 border rounded-3">
+                            <h6 class="text-muted">Disponibles</h6>
+                            <h4></h4>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="p-3 border rounded-3">
+                            <h6 class="text-muted">Estado</h6>
+                            <h4 class="text-success">Activo</h4>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="mt-4 d-flex gap-2">
+                    <a asp-action="Edit" asp-route-id="" class="btn btn-warning">
+                        Editar
+                    </a>
+
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">
+                        Eliminar
+                    </a>
+
+                    <a asp-action="Index" class="btn btn-secondary">
+                        Volver
+                    </a>
+                </div>
+
             </div>
-
         </div>
     </div>
-</div>
-</body>
-</html>
+</form>
