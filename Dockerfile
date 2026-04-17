@@ -25,4 +25,4 @@ COPY --from=build /out .
 EXPOSE 8080
 
 # Comando de inicio
-ENTRYPOINT ["dotnet", "Evento.dll"]
+ENTRYPOINT ["dotnet", "Eventos.dll"]

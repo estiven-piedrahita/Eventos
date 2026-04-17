@@ -1,0 +1,46 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/modules.xml
+/.idea.Eventos.iml
+/contentModel.xml
+# Ignored default folder with query files
+/queries/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Build
+bin/
+obj/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+
+# Archivos de usuario
+*.user
+*.suo
+
+# Logs
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración sensible
+appsettings.Development.json
+appsettings.Local.json
+
+# Dependencias
+node_modules/
+
+# Publicaciones
+publish/
+
+# Docker (opcional)
+*.tar
