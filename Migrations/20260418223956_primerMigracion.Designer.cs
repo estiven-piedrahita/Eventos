@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Eventos.Migrations
 {
     [DbContext(typeof(MysqlConnexion))]
-    [Migration("20260417165132_PrimeraMigracion")]
-    partial class PrimeraMigracion
+    [Migration("20260418223956_primerMigracion")]
+    partial class primerMigracion
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,7 +40,8 @@ namespace Eventos.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Imagen")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(1000)
+                        .HasColumnType("varchar(1000)");
 
                     b.Property<string>("Nombre")
                         .HasColumnType("longtext");

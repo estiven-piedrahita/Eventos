@@ -1,79 +1,71 @@
-﻿body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: rgba(155, 155, 155, 0.24);
-    
+﻿body {
+    background: #f4f6fb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #1f2937;
+    font-weight: 700;
+}
 
 .form-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.26);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    width: 60%;
-    margin-left: 250px;
-    margin-top: 40px;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .form-group {
-    margin-bottom: 10px;
-    
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
 }
-.title{
-    
-    text-align: center;
-    font-weight: bold;
-    font-size: 50px;
-    width: 100%;
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #374151;
 }
 
 .form-control {
-    width: 100%;
-    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    padding: 10px;
+    font-size: 14px;
+    transition: all 0.2s ease;
 }
-label{
-    font-size: 23px;
-    padding-bottom: 6px;
-    
+
+.form-control:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59,130,246,0.2);
+    outline: none;
+}
+
+textarea.form-control {
+    min-height: 50px;
+    resize: none;
 }
 
 .btn {
-    padding: 6px 10px;
-    text-decoration: none;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 .btn-primary {
-    background: #007bff;
-    color: white;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
     border: none;
-    padding: 10px 20px;
 }
 
-.btn-warning {
-    background: #ffc107;
-    color: black;
-}
-
-.btn-danger {
-    background: #dc3545;
-    color: white;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th {
-    background: #007bff;
-    color: white;
-}
-
-th, td {
-    padding: 10px;
-    text-align: center;
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
 }

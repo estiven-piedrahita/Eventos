@@ -9,7 +9,7 @@
       "Eventos/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.15",
-          "Microsoft.EntityFrameworkCore.Tools": "9.0.15",
+          "Microsoft.EntityFrameworkCore.Design": "9.0.15",
           "Pomelo.EntityFrameworkCore.MySql": "9.0.0"
         },
         "runtime": {
@@ -356,11 +356,6 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/9.0.15": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "9.0.15"
-        }
-      },
       "Microsoft.Extensions.DependencyModel/9.0.15": {
         "runtime": {
           "lib/net9.0/Microsoft.Extensions.DependencyModel.dll": {
@@ -559,13 +554,6 @@
       "sha512": "sha512-RrU/Wgb6Hg7D/e3kEZjKNh7UZxc61i3iwM1wtR/fpKk090ZQTEzcZjIIKC8Jpl+WXeOaC3fPYH5++FRZKpS7kw==",
       "path": "microsoft.entityframeworkcore.relational/9.0.15",
       "hashPath": "microsoft.entityframeworkcore.relational.9.0.15.nupkg.sha512"
-    },
-    "Microsoft.EntityFrameworkCore.Tools/9.0.15": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-QT3iBy2zJYGFrk0RFHG8i4pQJ89YllWBjB7fHy8/ZAgdLsfSwJW896zwQgMRzRqpD8RP1184LPIpwAzkwg4Zvw==",
-      "path": "microsoft.entityframeworkcore.tools/9.0.15",
-      "hashPath": "microsoft.entityframeworkcore.tools.9.0.15.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyModel/9.0.15": {
       "type": "package",

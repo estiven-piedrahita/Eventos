@@ -1,37 +1,41 @@
-﻿<div class="container mt-4">
-    <div class="row">
+﻿@model Eventos.Models.Evento
+<html>
+<head>
+    <title>Editar</title>
+    <link rel="stylesheet" href="./css/Create.css">
+</head>
+</html>
 
-        @foreach (var item in Model)
-        {
-            <div class="col-md-4 mb-4">
-                <div class="card">
 
-                    <div class="bg-image hover-overlay ripple">
-                        <img src="https://via.placeholder.com/400x200" class="img-fluid" />
-                    </div>
 
-                    <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <p class="card-text">
-                            
-                        </p>
+<div class="form-card">
+    <form asp-action="Update" asp-controller="PanelAdministrativo"   method="post">
 
-                        <a asp-action="Details" asp-route-id="" class="btn btn-primary">
-                            Ver más
-                        </a>
+        <div class="form-group">
+            <label>Nombre Del Evento</label>
+            <input type="text"  class="form-control"  asp-for="Nombre" required />
+        </div>
 
-                        <a asp-action="Edit" asp-route-id="" class="btn btn-warning">
-                            Editar
-                        </a>
+        <div class="form-group">
+            <label>Fecha Del Evento</label>
+            <input type="text"  class="form-control" asp-for="Fecha" required />
+        </div>
 
-                        <a asp-action="Delete" asp-route-id="" class="btn btn-danger">
-                            Eliminar
-                        </a>
-                    </div>
+        <div class="form-group">
+            <label>Descripción Del Evento</label>
+            <textarea  class="form-control" asp-for="Descripcion" required></textarea>
+        </div>
 
-                </div>
-            </div>
-        }
+        <div class="form-group">
+            <label>Ubicación Del Evento</label>
+            <input type="text"  class="form-control" asp-for="Ubicacion" required />
+        </div>
 
-    </div>
+        <div class="form-group">
+            <label>URL Imagen</label>
+            <input type="text"  class="form-control" asp-for="Imagen" />
+        </div>
+            
+        <button asp-action="Index"  type="submit" class="btn btn-primary">Guardar</button>
+    </form>
 </div>

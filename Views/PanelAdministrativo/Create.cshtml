@@ -1,4 +1,4 @@
-﻿
+﻿@model Eventos.Models.Evento
 
 <html>
 <head>
@@ -14,34 +14,32 @@
 
             <div class="form-group">
                 <label>Nombre Del Evento</label>
-                <input type="text" name="Nombre" class="form-control" required />
+                <input type="text" class="form-control"  asp-for="Nombre" required />
             </div>
 
             <div class="form-group">
                 <label>Fecha Del Evento</label>
-                <input type="date" name="Fecha" class="form-control" required />
+                <input type="date" asp-for="Fecha" class="form-control" required />
             </div>
 
             <div class="form-group">
                 <label>Descripción Del Evento</label>
-                <textarea name="Descripcion" class="form-control" required></textarea>
+                <textarea  class="form-control" asp-for="Descripcion" required></textarea>
             </div>
 
             <div class="form-group">
                 <label>Ubicación Del Evento</label>
-                <input type="text" name="Ubicacion" class="form-control" required />
+                <input type="text"  class="form-control" asp-for="Ubicacion" required />
             </div>
 
             <div class="form-group">
                 <label>URL Imagen</label>
-                <input type="text" name="ImagenUrl" class="form-control" />
+                <input type="text"  class="form-control" asp-for="Imagen" />
             </div>
             
-            <button asp-action="Index"  type="submit" class="btn btn-primary">Guardar</button>
+            <button   type="submit" class="btn btn-primary">Guardar</button>
         </form>
     </div>
 </div>
 </body>
 </html>
-
-

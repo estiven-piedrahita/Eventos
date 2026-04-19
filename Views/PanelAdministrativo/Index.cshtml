@@ -1,63 +1,55 @@
-﻿
+﻿@model IEnumerable<Eventos.Models.Evento>
 <html>
 <head>
-    <title>title</title>
+    <title>Todos Los Eventos</title>
     <link rel="stylesheet" href="/css/Index.css">
 </head>
 <body>
 <div>
     <div class="container mt-5">
-        
+
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="fw-bold"> Eventos De Programacion</h2>
+            <h2 class="fw-bold title-principal"> Eventos De Programacion</h2>
 
             <a asp-action="Create" class="btn btn-success shadow-3">
                 Crear Evento
             </a>
         </div>
-        
-        <div class="col-md-4 mb-4">
-            <div class="card shadow-3 rounded-4 h-100">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4" class="img-fluid rounded-top" />
-                </div>
-                
-                <div class="card-body d-flex flex-column">
-                    <h5 class="fw-bold">Festival de Música Electrónica</h5>
-                    <div class="d-flex justify-content-between text-muted small mb-2">
-                        <span> 25 Abr 2026</span>
-                        <span> Medellín</span>
+        <div class="row">
+            @foreach (var evento in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-3 rounded-4 h-100">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="@evento.Imagen" class="img-fluid rounded-top"/>
+                        </div>
+
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="fw-bold">@evento.Nombre</h5>
+
+                            <div class="d-flex justify-content-between text-muted small mb-2">
+                                <span>@evento.Fecha</span>
+                                <span>@evento.Ubicacion</span>
+                            </div>
+
+                            <p class="text-muted flex-grow-1">
+                                @evento.Descripcion
+                            </p>
+
+                            <div class="d-flex justify-content-between mt-auto">
+                                <form asp-action="Delete" asp-controller="PanelAdministrativo" asp-route-id="@evento.Id" method="post" >
+                                    <a class="btn btn-primary btn-sm" asp-action="Show" asp-controller="PanelAdministrativo" asp-route-id="@evento.Id">Ver</a>
+                                    <a class="btn btn-warning btn-sm" asp-action="Edit" asp-controller="PanelAdministrativo" asp-route-id="@evento.Id">Editar</a>
+                                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-muted flex-grow-1">
-                        Disfruta de una noche llena de música, luces y los mejores DJs del momento en un evento inolvidable.
-                    </p>
-                    
-                    <div class="d-flex justify-content-between mt-auto">
-
-                        <a href="#" class="btn btn-primary btn-sm">
-                            Ver
-                        </a>
-
-                        <a href="#" class="btn btn-warning btn-sm">
-                            Editar
-                        </a>
-
-                        <a href="#" class="btn btn-danger btn-sm">
-                            Eliminar
-                        </a>
-
-                    </div>
-
                 </div>
-            </div>
+            }
         </div>
-
-       
-
     </div>
-    
 </div>
 
 </body>
-
 </html>

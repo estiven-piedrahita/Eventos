@@ -37,7 +37,8 @@ namespace Eventos.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Imagen")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(1000)
+                        .HasColumnType("varchar(1000)");
 
                     b.Property<string>("Nombre")
                         .HasColumnType("longtext");
